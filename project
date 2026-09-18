@@ -1,0 +1,99 @@
+Part A - Project Setup Using the CLI
+Required results:
+A screenshot showing the recursive directory listing with all folders and files correctly named and nested.
+
+
+
+
+
+
+
+
+In the worksheet, a short paragraph describing what each command you ran does, and a second paragraph explaining why separating code into src, tests, and docs is good practice even for small projects.
+I successfully completed the Python lab by creating a new `python_lab` directory and organizing the project into three subdirectories: `src`, `tests`, and `docs`.
+Inside the `src` directory, I created three empty Python files: `main.py`, `utils.py`, and `config.py`. I also created a `README.md` file in the `docs` directory and used the `echo` command with output redirection to add the text **“My Python Lab Project”** to the file.
+Finally, I used the `tree /F` command to display the complete project structure, including all directories and files. The screenshot confirms that everything was created and organized correctly, showing that all the required steps of the Python lab were successfully completed.
+
+
+
+
+Part B - Git Initialization and First Commit
+Required results:
+A screenshot of the commit history showing your first commit with your message.
+
+
+
+
+
+In the worksheet, explain what .gitignore does, why the two file patterns you added matter, and what information the commit history reveals about a project's development over time.
+The `.gitignore` file is used to tell Git which files and folders should not be tracked or included in commits. In this project, I added patterns to ignore Python cache folders, `.pyc` compiled files, and `.env` files. Ignoring cache folders and `.pyc` files is helpful because Python creates them automatically, and they are not necessary to share with other developers. The `.env` file is particularly important because it may contain sensitive information such as passwords, API keys, and other private configuration details that should not be uploaded to a Git repository.
+The commit history shows how the project has developed over time. It keeps a record of important details such as the commit message, the person who made the change, the date and time, and the unique commit ID. By reviewing the commit history, developers can easily understand what changes were made, when they were made, and how the project has progressed. It also makes it easier to identify problems, track previous changes, and restore the project to an earlier version when necessary.
+
+
+
+
+
+
+
+Part C: Writing and Committing Python Code
+Required results:
+Complete, working code for both utils.py and main.py pasted into the worksheet.
+
+utils.py
+def square(n):
+    return n ** 2
+
+def is_even(n):
+    return n % 2 == 0
+
+def celsius_to_fahrenheit(c):
+    return (c * 9 / 5) + 32
+
+main.py
+from utils import square, is_even, celsius_to_fahrenheit
+
+number = float(input("Enter a number: "))
+
+print("Square:", square(number))
+
+if is_even(number):
+    print("Even: True")
+else:
+    print("Even: False")
+
+print("Fahrenheit:", celsius_to_fahrenheit(number))
+
+A written explanation of how Python's import system connects main.py to utils.py.
+Python allows me to use functions from one file in another by using imports. In this project, I created `utils.py` to store useful functions such as `square()`, `is_even()`, and `celsius_to_fahrenheit()`.
+In `main.py`, I used `from utils import square, is_even, celsius_to_fahrenheit` to bring these functions into the program. Since both files are in the same `src` folder, Python can find `utils.py` easily.
+This makes the project cleaner and easier to manage because I can reuse the functions in `main.py` without writing the same code again. It also saves time and makes the code easier to understand and maintain.
+Confirmation (e.g., sample terminal output) that you tested at least three different inputs.
+
+
+
+
+
+
+
+
+
+
+
+Part D : Publishing to GitHub and Branch Workflow
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+	
+
+	
